@@ -43,9 +43,8 @@ class CatsDataset(Dataset):
 
 
     @staticmethod
-    def get_dataloader():
-        batch_size = 2
-        root_dir = r"D:\datasets\cats\Data"
+    def get_dataloader(batch_size=8):
+        root_dir = r"/home/dcd/zww/data/cats/Data"
         train_dataset = CatsDataset(root_dir, category='train', span=[0.0, 0.7])
         val_dataset = CatsDataset(root_dir, category='val', span=[0.7, 0.9])
         test_dataset = CatsDataset(root_dir, category='test', span=[0.9, 1.0])
